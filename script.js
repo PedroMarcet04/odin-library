@@ -58,6 +58,13 @@ const displayBook = function(book) {
                 readStatusSVG[
                     book.isRead?"read":"notRead"
                 ];
+            toggleReadButton.addEventListener("click", function() {
+                book.isRead = !book.isRead;
+                toggleReadButton.innerHTML =
+                    readStatusSVG[
+                        book.isRead?"read":"notRead"
+                    ];
+            });
             buttonsDiv.appendChild(toggleReadButton);
 
             const deleteButton = document.createElement("button");

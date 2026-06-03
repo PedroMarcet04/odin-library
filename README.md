@@ -3,3 +3,6 @@ A practice project for reinforcing JS object knowledge following The Odin Projec
 
 ## Odin link
 https://www.theodinproject.com/lessons/node-path-javascript-library
+
+## Credits
+- Icons from: https://pictogrammers.com/library/mdi/

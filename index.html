@@ -8,7 +8,9 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <h1>Library</h1>
+    <header>
+        <h1>Library</h1>
+    </header>
     <div class="library" id="library">
         <!-- Example Card -->
         <!-- <div class="book-card">
@@ -21,5 +23,32 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>plus</title><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>
         </button>
     </div>
+    <form class="add-book-form hide" id="add-book-form">
+        <legend>Add new book</legend>
+
+        <div class="form-item">
+            <label for="book-title-input">Book title</label>
+            <input id="book-title-input" name="book-title-input" type="text" required>
+        </div>
+
+        <div class="form-item">
+            <label for="book-author-input">Book author</label>
+            <input id="book-author-input" name="book-author-input" type="text" required>
+        </div>
+
+        <div class="form-item">
+            <label for="book-num-of-pages-input">Number of pages</label>
+            <input id="book-num-of-pages-input" name="book-num-of-pages-input" type="number" required>
+        </div>
+
+        <div class="form-item check">
+            <label for="book-is-read-input">Have you already read this book?</label>
+            <input id="book-is-read-input" name="book-is-read-input" type="checkbox">
+        </div>
+
+        <button type="submit">Add Book</button>
+
+        <button type="button">Close</button>
+    </form>
 </body>
 </html>

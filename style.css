@@ -68,14 +68,21 @@ header>h1 {
 .book-card>.author {
     grid-column: 1 / -1;
 }
-.book-card>.toggle-read {
+.book-card>.buttons {
+    box-sizing: content-box;
+    height: 24px;
+    position: absolute;
+    padding: 4px;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 4px;
+}
+.book-card>.buttons>button {
     background: 0;
     border: 0;
-    height: 24px;
-    width: 24px;
-    position: absolute;
-    top: 4px;
-    right: 4px;
+    height: 100%;
+    aspect-ratio: 1;
 }
 
 

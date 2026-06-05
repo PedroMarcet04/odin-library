@@ -11,14 +11,16 @@ const deleteSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><
 
 let library = [];
 
-const Book = function(title, author, numOfPages, isRead) {
-    if (!new.target) throw Error("Failed to instantiate (add 'new')");
-    this.id = crypto.randomUUID();
-    this.title = title;
-    this.author = author;
-    this.numOfPages = numOfPages;
-    this.isRead = isRead;
-    this.info = function() {
+class Book {
+    constructor(title, author, numOfPages, isRead) {
+        this.id = crypto.randomUUID();
+        this.title = title;
+        this.author = author;
+        this.numOfPages = numOfPages;
+        this.isRead = isRead;
+    }
+
+    get info() {
         return `${this.title} by ${this.author}, ${this.numOfPages} pages, ${this.isRead?"has been read":"not read yet"}`;
     }
 }
@@ -26,6 +28,7 @@ const Book = function(title, author, numOfPages, isRead) {
 const addBookToLibrary = function(title, author, numOfPages, isRead) {
     const book = new Book(title, author, numOfPages, isRead);
     library.push(book);
+    console.log(book.info)
 }
 
 const displayBook = function(book) {
